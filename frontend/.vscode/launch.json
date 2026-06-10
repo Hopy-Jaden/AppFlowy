@@ -1,3 +1,13 @@
+/* Run command Before Launch
+rustup default 1.80.1
+cargo install cargo-make --force --locked
+cargo install --force duckscript_cli --locked
+dart pub global activate protoc_plugin 21.1.2
+dart pub global activate fvm
+fvm install 3.27.4
+fvm use 3.27.4
+fvm dart pub global activate protoc_plugin 21.1.2
+*/
 {
   // Use IntelliSense to learn about possible attributes.
   // Hover to view descriptions of existing attributes.

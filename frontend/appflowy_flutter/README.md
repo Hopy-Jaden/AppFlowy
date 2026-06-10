@@ -48,3 +48,55 @@ We have detailed documentation on how to [get started](https://docs.appflowy.io/
 - New to GitHub? Follow [these](https://docs.appflowy.io/docs/documentation/software-contributions/submitting-code/setting-up-your-repositories) steps to get started
 - Stuck Somewhere? Join our [Discord](https://discord.gg/9Q2xaN37tV), we're there to help you!
 - Find out more about the [community initiatives](https://docs.appflowy.io/docs/appflowy/community).
+
+
+### How to Set-up In Windows
+1. Visual Studio 2022 
+In section "All Downloads" => "Tools for Visual Studio 2022" => "Build Tools for Visual Studio 2022".
+Launch vs_BuildTools.exe to install.
+Choose "Desktop Development with C++"
+
+2. vcpkg
+Add vcpkg installation folder to your PATH environment variable.
+
+3. Flutter
+Install flutter, make sure version as 3.27.4.
+flutter config --enable-windows-desktop
+flutter doctor
+
+4. LLVM
+Add LLVM to PATH environment variable
+
+5. Rust
+Install rust
+
+6. OpenSSl
+Add Openssl to PATH like G:\Compilation\OpenSSL\bin
+
+7. Perl
+
+8. Protoc
+Install protoc for dart activation of protoc_plugin
+
+
+1. Run Commands
+rustup default 1.80.1
+cargo install cargo-make --force --locked
+cargo install --force duckscript_cli --locked
+dart pub global activate protoc_plugin 21.1.2
+dart pub global activate fvm
+fvm install 3.27.4
+fvm use 3.27.4
+
+2. create settings.json in .vscode folder
+{
+  "dart.flutterSdkPath": ".fvm/versions/3.27.4",
+  "search.exclude": {
+    "**/.fvm": true
+  },
+  "watcher.exclude": {
+    "**/.fvm": true
+  }
+}
+
+3. fvm dart pub global activate protoc_plugin 21.1.2
