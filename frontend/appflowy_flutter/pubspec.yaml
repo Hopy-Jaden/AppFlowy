@@ -152,11 +152,11 @@ dependencies:
   analyzer: 6.11.0
 
   html: any
+  build_runner: ^2.4.15
 dev_dependencies:
   # Introduce talker to log the bloc events, and only log the events in the development mode
 
   bloc_test: ^10.0.0
-  build_runner: ^2.4.9
   envied_generator: ^1.0.1
   flutter_lints: ^5.0.0
 
